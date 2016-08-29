@@ -1,10 +1,7 @@
-from django.conf.urls import url
-from . import views
-
+from django.conf.urls import include, url
+from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$', views.vistainicio),
-    url(r'^pacientes/$', views.vistapaciente),
-
-]
-
+        url(r'^admin/', include(admin.site.urls)),
+        url(r'^', include('consultorioodontologico.urls')),
+    ]

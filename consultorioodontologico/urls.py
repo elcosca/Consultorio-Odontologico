@@ -1,8 +1,8 @@
-from django.conf.urls import include, url
-from django.contrib import admin
-
+from django.conf.urls import url
+from . import views
 
 urlpatterns = [
-        url(r'^admin/', include(admin.site.urls)),
-        url(r'^', include('consultorioodontologico.urls')),
-    ]
+    url(r'^$', views.vistainicio),
+    url(r'^pacientes/$', views.vistapaciente),
+
+]
